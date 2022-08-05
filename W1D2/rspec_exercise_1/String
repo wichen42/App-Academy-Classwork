@@ -1,0 +1,33 @@
+[0m[1;32m.strip[m
+
+(from gem mail-2.7.1)
+[32mImplementation from Chars[m
+------------------------------------------------------------------------
+  strip()
+
+------------------------------------------------------------------------
+
+Strips entire range of Unicode whitespace from the right and left of the
+string.
+
+
+(from ruby core)
+[32mImplementation from String[m
+------------------------------------------------------------------------
+  str.strip   -> new_str
+
+------------------------------------------------------------------------
+
+Returns a copy of the receiver with leading and trailing whitespace
+removed.
+
+Whitespace is defined as any of the following characters: null,
+horizontal tab, line feed, vertical tab, form feed, carriage return,
+space.
+
+  "    hello    ".strip   #=> "hello"
+  "\tgoodbye\r\n".strip   #=> "goodbye"
+  "\x00\t\n\v\f\r ".strip #=> ""
+  "hello".strip           #=> "hello"
+
+
