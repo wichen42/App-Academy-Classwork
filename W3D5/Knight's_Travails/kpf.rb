@@ -67,16 +67,16 @@ class KnightPathFinder
 
 end
 
-kpf = KnightPathFinder.new([0,0])
+#kpf = KnightPathFinder.new([0,0])
 #kpf.build_move_tree
 #p kpf.considered_pos
 #p kpf.new_move_positions([1,2])
-kpf.build_move_tree
+#kpf.build_move_tree
 
 #p kpf
 #kpf.populate_children
 #p kpf.root
-p kpf.find_path([5,4])
+#p kpf.find_path([5,4])
 #p kpf.trace_path_back([0,0])
 #p kpf.find_path([0,0])
 
