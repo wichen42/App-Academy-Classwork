@@ -1,0 +1,53 @@
+
+<% if action == :new %>
+  <%# debugger %>
+  <% action_url = cats_url %>
+  <% button_text = "create Cat" %>
+<% elsif action == :edit %>
+  <% action_url = cat_url(@cat.id) %>
+  <% button_text = "update Cat" %>
+<% end %>
+
+<form action=<%= action_url %> method="POST">
+<% if action == :edit %>
+  <input type="hidden" name="_method" value="PATCH">
+<% end %>
+
+
+  <label for="cat_name">Cat name</label>
+  <input id="cat_name" type="text" name="cat[name]" value="<%= @cat.name %>">
+  <br>
+
+  <label> Sex <br>
+    <input type="radio" id = "Male" name="cat[sex]" value="M">
+    <label for="Male">M</label><br>
+    <input type="radio" id = "Female" name="cat[sex]" value="F">
+    <label for="Female">F</label><br>
+  </label>
+
+<p>Choose Your Color</p> <br>
+<select name="cat[color]">
+    <option value="default" selected> -- </option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+</select>
+
+<br>
+
+<p>What's Cat's Birth Day</p>
+<input type="date" name="cat[birth_date]" value="<%= @cat.birth_date %>">
+
+<p>Describe Your Cat</p> <br>
+<textarea name="cat[description" value="<%= @cat.description %>">
+</textarea>
+<br>
+
+<% if action == :edit %>
+    <input type="submit" value="Update Cat">
+<% else %>
+     <input type="submit" value="Create Cat">
+<% end %>
+
+
+</form>
