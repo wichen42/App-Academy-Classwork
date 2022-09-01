@@ -1,0 +1,33 @@
+/* PHASE 1: Header */
+
+.header {
+    width: auto;
+    height: 40px;
+    background: #f00;
+    position: relative;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.aa_friends {
+    display: block;
+    float: left;
+    border-right: 1px solid #ccc;
+    font-weight: 700;
+}
+
+.nav_group {
+    margin: 0 auto;
+    width: 900px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.header_list {
+    display: inline-block;
+    text-align: left;
+    float: right;
+}

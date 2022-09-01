@@ -1,0 +1,58 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 10px;
+  border-color: black;
+  font-weight:500;
+}
+
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: serif;
+  font-size: 20;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.left-nav {
+
+  > ul {
+    > li {
+      margin-right: 50px;
+
+    }
+  }
+
+}
+
+
+.right-nav  {
+  > ul {
+    > li {
+      margin-right: 4px;
+    }
+
+    > li:last-of-type {
+      
+    }
+  }
+  
+  i {
+    
+  }
+}
+
+#gear-icon {
+  background-color: none;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  background-color: lightgray;
+  padding: 10px;
+}
