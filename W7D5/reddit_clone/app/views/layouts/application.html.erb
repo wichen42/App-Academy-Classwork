@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RedditClone</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+
+    <% if logged_in? %>
+
+      <a href="<%= users_url %>">Index Page</a>
+      <div>
+          <p>Welcome <%= @current_user.username %></p>
+          <form action="<%= session_url %>" method="POST">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit">Log Out</button>
+          </form>  
+      </div>
+    <% end %>
+
+    <% if flash[:errors] %>
+      <p><%= flash[:errors].join(", ") %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
