@@ -10,7 +10,7 @@
 #  lat         :float            not null
 #  lng         :float            not null
 #  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  updated_at  :datetime         not nulljson.extract! @bench :id, :title, :description, :price, :seating, :lat, :lng
 #
 class Bench < ApplicationRecord
 
